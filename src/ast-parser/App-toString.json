@@ -1,0 +1,72 @@
+[ {
+  "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/domain/App.java",
+  "packageName" : "br.com.example.davidarchanjo.model.domain",
+  "imports" : [ {
+    "dereferencedParts" : [ ],
+    "name" : "javax.persistence.Entity"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "javax.persistence.GeneratedValue"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "javax.persistence.Id"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "javax.persistence.Table"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "lombok.Builder"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "lombok.Data"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "lombok.NoArgsConstructor"
+  } ],
+  "entities" : [ {
+    "name" : "App",
+    "description" : null,
+    "annotations" : [ "Data", "Entity", "NoArgsConstructor", "Table" ],
+    "methods" : [ ],
+    "fields" : [ {
+      "name" : "id",
+      "accessModifier" : "private",
+      "value" : null,
+      "type" : "Long",
+      "description" : null
+    }, {
+      "name" : "author",
+      "accessModifier" : "private",
+      "value" : null,
+      "type" : "String",
+      "description" : null
+    }, {
+      "name" : "name",
+      "accessModifier" : "private",
+      "value" : null,
+      "type" : "String",
+      "description" : null
+    }, {
+      "name" : "version",
+      "accessModifier" : "private",
+      "value" : null,
+      "type" : "String",
+      "description" : null
+    } ],
+    "constructors" : [ {
+      "name" : "App",
+      "body" : "{\n    this.id = id;\n    this.author = author;\n    this.name = name;\n    this.version = version;\n}",
+      "arguments" : [ "Long id", "String author", "String name", "String version" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ "id", "author", "name", "version" ],
+      "annotations" : [ "Builder" ],
+      "description" : null,
+      "methodDefinition" : "@Builder\npublic App(Long id, String author, String name, String version) {\n    this.id = id;\n    this.author = author;\n    this.name = name;\n    this.version = version;\n}"
+    } ],
+    "extends" : null,
+    "childEntity" : null,
+    "accessSpecifier" : "PUBLIC"
+  } ],
+  "samePackageClasses" : [ ]
+} ]

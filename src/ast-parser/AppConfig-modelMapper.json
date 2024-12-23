@@ -1,0 +1,43 @@
+[ {
+  "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/config/AppConfig.java",
+  "packageName" : "br.com.example.davidarchanjo.config",
+  "imports" : [ {
+    "dereferencedParts" : [ ],
+    "name" : "org.modelmapper.ModelMapper"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.context.annotation.Bean"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.context.annotation.Configuration"
+  } ],
+  "entities" : [ {
+    "name" : "AppConfig",
+    "description" : null,
+    "annotations" : [ "Configuration" ],
+    "methods" : [ {
+      "name" : "modelMapper",
+      "body" : "{\n    ModelMapper modelMapper = new ModelMapper();\n    // ignore null attributes on the source object on copying\n    modelMapper.getConfiguration().setSkipNullEnabled(true);\n    return modelMapper;\n}",
+      "arguments" : [ ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "setSkipNullEnabled",
+        "arguments" : [ "true" ]
+      }, {
+        "name" : "getConfiguration",
+        "arguments" : [ ]
+      } ],
+      "usedEntities" : [ "modelMapper" ],
+      "annotations" : [ "Bean" ],
+      "returnType" : "ModelMapper",
+      "description" : null,
+      "methodDefinition" : "@Bean\npublic ModelMapper modelMapper() {\n    ModelMapper modelMapper = new ModelMapper();\n    // ignore null attributes on the source object on copying\n    modelMapper.getConfiguration().setSkipNullEnabled(true);\n    return modelMapper;\n}"
+    } ],
+    "fields" : [ ],
+    "constructors" : [ ],
+    "extends" : null,
+    "childEntity" : null,
+    "accessSpecifier" : "PUBLIC"
+  } ],
+  "samePackageClasses" : [ ]
+} ]
