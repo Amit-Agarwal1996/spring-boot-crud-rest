@@ -325,34 +325,19 @@
     "description" : null,
     "annotations" : [ "Service", "AllArgsConstructor" ],
     "methods" : [ {
-      "name" : "createNewApp",
-      "body" : "{\n    return Stream.of(dto).map(builder::build).map(repository::save).map(App::getId).findFirst().get();\n}",
-      "arguments" : [ "AppDTO dto" ],
+      "name" : "deleteAppById",
+      "body" : "{\n    repository.deleteById(id);\n}",
+      "arguments" : [ "Long id" ],
       "accessModifier" : "public",
       "methodsCalled" : [ {
-        "name" : "get",
-        "arguments" : [ ]
-      }, {
-        "name" : "findFirst",
-        "arguments" : [ ]
-      }, {
-        "name" : "map",
-        "arguments" : [ "App::getId" ]
-      }, {
-        "name" : "map",
-        "arguments" : [ "repository::save" ]
-      }, {
-        "name" : "map",
-        "arguments" : [ "builder::build" ]
-      }, {
-        "name" : "of",
-        "arguments" : [ "dto" ]
+        "name" : "deleteById",
+        "arguments" : [ "id" ]
       } ],
-      "usedEntities" : [ "Stream", "dto" ],
+      "usedEntities" : [ "repository", "id" ],
       "annotations" : [ "Override" ],
-      "returnType" : "Long",
+      "returnType" : "void",
       "description" : null,
-      "methodDefinition" : "@Override\npublic Long createNewApp(AppDTO dto) {\n    return Stream.of(dto).map(builder::build).map(repository::save).map(App::getId).findFirst().get();\n}"
+      "methodDefinition" : "@Override\npublic void deleteAppById(Long id) {\n    repository.deleteById(id);\n}"
     } ],
     "fields" : [ {
       "name" : "repository",

@@ -325,34 +325,58 @@
     "description" : null,
     "annotations" : [ "Service", "AllArgsConstructor" ],
     "methods" : [ {
-      "name" : "createNewApp",
-      "body" : "{\n    return Stream.of(dto).map(builder::build).map(repository::save).map(App::getId).findFirst().get();\n}",
-      "arguments" : [ "AppDTO dto" ],
+      "name" : "populate",
+      "body" : "{\n    val faker = new Faker();\n    IntStream.range(0, 100).forEach(i -> {\n        App app = App.builder().author(faker.app().author()).name(faker.app().name()).version(faker.app().version()).build();\n        repository.save(app);\n    });\n}",
+      "arguments" : [ ],
       "accessModifier" : "public",
       "methodsCalled" : [ {
-        "name" : "get",
+        "name" : "forEach",
+        "arguments" : [ "i -> {\n    App app = App.builder().author(faker.app().author()).name(faker.app().name()).version(faker.app().version()).build();\n    repository.save(app);\n}" ]
+      }, {
+        "name" : "range",
+        "arguments" : [ "0", "100" ]
+      }, {
+        "name" : "build",
         "arguments" : [ ]
       }, {
-        "name" : "findFirst",
+        "name" : "version",
+        "arguments" : [ "faker.app().version()" ]
+      }, {
+        "name" : "name",
+        "arguments" : [ "faker.app().name()" ]
+      }, {
+        "name" : "author",
+        "arguments" : [ "faker.app().author()" ]
+      }, {
+        "name" : "builder",
         "arguments" : [ ]
       }, {
-        "name" : "map",
-        "arguments" : [ "App::getId" ]
+        "name" : "author",
+        "arguments" : [ ]
       }, {
-        "name" : "map",
-        "arguments" : [ "repository::save" ]
+        "name" : "app",
+        "arguments" : [ ]
       }, {
-        "name" : "map",
-        "arguments" : [ "builder::build" ]
+        "name" : "name",
+        "arguments" : [ ]
       }, {
-        "name" : "of",
-        "arguments" : [ "dto" ]
+        "name" : "app",
+        "arguments" : [ ]
+      }, {
+        "name" : "version",
+        "arguments" : [ ]
+      }, {
+        "name" : "app",
+        "arguments" : [ ]
+      }, {
+        "name" : "save",
+        "arguments" : [ "app" ]
       } ],
-      "usedEntities" : [ "Stream", "dto" ],
+      "usedEntities" : [ "IntStream", "App", "faker", "repository", "app" ],
       "annotations" : [ "Override" ],
-      "returnType" : "Long",
+      "returnType" : "void",
       "description" : null,
-      "methodDefinition" : "@Override\npublic Long createNewApp(AppDTO dto) {\n    return Stream.of(dto).map(builder::build).map(repository::save).map(App::getId).findFirst().get();\n}"
+      "methodDefinition" : "@Override\npublic void populate() {\n    val faker = new Faker();\n    IntStream.range(0, 100).forEach(i -> {\n        App app = App.builder().author(faker.app().author()).name(faker.app().name()).version(faker.app().version()).build();\n        repository.save(app);\n    });\n}"
     } ],
     "fields" : [ {
       "name" : "repository",

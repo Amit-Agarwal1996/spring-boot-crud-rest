@@ -325,34 +325,37 @@
     "description" : null,
     "annotations" : [ "Service", "AllArgsConstructor" ],
     "methods" : [ {
-      "name" : "createNewApp",
-      "body" : "{\n    return Stream.of(dto).map(builder::build).map(repository::save).map(App::getId).findFirst().get();\n}",
-      "arguments" : [ "AppDTO dto" ],
+      "name" : "updateApp",
+      "body" : "{\n    return repository.findById(id).map(model -> builder.build(dto, model)).map(repository::save).map(builder::build).orElseThrow(() -> new AppNotFoundException(String.format(\"No such App for id '%s'\", id)));\n}",
+      "arguments" : [ "Long id", "AppDTO dto" ],
       "accessModifier" : "public",
       "methodsCalled" : [ {
-        "name" : "get",
-        "arguments" : [ ]
-      }, {
-        "name" : "findFirst",
-        "arguments" : [ ]
+        "name" : "orElseThrow",
+        "arguments" : [ "() -> new AppNotFoundException(String.format(\"No such App for id '%s'\", id))" ]
       }, {
         "name" : "map",
-        "arguments" : [ "App::getId" ]
+        "arguments" : [ "builder::build" ]
       }, {
         "name" : "map",
         "arguments" : [ "repository::save" ]
       }, {
         "name" : "map",
-        "arguments" : [ "builder::build" ]
+        "arguments" : [ "model -> builder.build(dto, model)" ]
       }, {
-        "name" : "of",
-        "arguments" : [ "dto" ]
+        "name" : "findById",
+        "arguments" : [ "id" ]
+      }, {
+        "name" : "build",
+        "arguments" : [ "dto", "model" ]
+      }, {
+        "name" : "format",
+        "arguments" : [ "\"No such App for id '%s'\"", "id" ]
       } ],
-      "usedEntities" : [ "Stream", "dto" ],
-      "annotations" : [ "Override" ],
-      "returnType" : "Long",
+      "usedEntities" : [ "repository", "id", "builder", "dto", "model", "String" ],
+      "annotations" : [ "Transactional", "Override" ],
+      "returnType" : "Optional<AppDTO>",
       "description" : null,
-      "methodDefinition" : "@Override\npublic Long createNewApp(AppDTO dto) {\n    return Stream.of(dto).map(builder::build).map(repository::save).map(App::getId).findFirst().get();\n}"
+      "methodDefinition" : "@Transactional\n@Override\npublic Optional<AppDTO> updateApp(Long id, AppDTO dto) {\n    return repository.findById(id).map(model -> builder.build(dto, model)).map(repository::save).map(builder::build).orElseThrow(() -> new AppNotFoundException(String.format(\"No such App for id '%s'\", id)));\n}"
     } ],
     "fields" : [ {
       "name" : "repository",

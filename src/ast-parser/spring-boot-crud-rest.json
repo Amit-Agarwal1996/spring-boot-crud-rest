@@ -1,0 +1,2007 @@
+[ {
+  "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/controller/AppController.java",
+  "packageName" : "br.com.example.davidarchanjo.controller",
+  "imports" : [ {
+    "dereferencedParts" : [ {
+      "name" : "AppDTO",
+      "description" : null,
+      "annotations" : [ "Data", "NoArgsConstructor" ],
+      "methods" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      }, {
+        "name" : "version",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      }, {
+        "name" : "author",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      } ],
+      "constructors" : [ {
+        "name" : "AppDTO",
+        "body" : "{\n    this.name = name;\n    this.version = version;\n    this.author = author;\n}",
+        "arguments" : [ "String name", "String version", "String author" ],
+        "accessModifier" : "public",
+        "methodsCalled" : [ ],
+        "usedEntities" : [ "name", "version", "author" ],
+        "annotations" : [ "Builder" ],
+        "description" : null,
+        "methodDefinition" : "@Builder\npublic AppDTO(String name, String version, String author) {\n    this.name = name;\n    this.version = version;\n    this.author = author;\n}"
+      } ],
+      "extends" : null,
+      "childEntity" : null,
+      "accessSpecifier" : "PUBLIC",
+      "imports" : [ {
+        "dereferencedParts" : [ ],
+        "name" : "com.fasterxml.jackson.annotation.JsonProperty"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "lombok"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "javax.validation.constraints.NotEmpty"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "javax.validation.constraints.Size"
+      } ]
+    } ],
+    "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/dto/AppDTO.java",
+    "name" : "br.com.example.davidarchanjo.model.dto.AppDTO"
+  }, {
+    "dereferencedParts" : [ {
+      "name" : "AppService",
+      "description" : null,
+      "annotations" : [ ],
+      "methods" : [ {
+        "name" : "createNewApp",
+        "body" : "{\n}",
+        "arguments" : [ "AppDTO dto" ],
+        "accessModifier" : "",
+        "methodsCalled" : [ ],
+        "usedEntities" : [ ],
+        "annotations" : [ ],
+        "returnType" : "Long",
+        "description" : null,
+        "methodDefinition" : "Long createNewApp(AppDTO dto);"
+      }, {
+        "name" : "getAllApps",
+        "body" : "{\n}",
+        "arguments" : [ ],
+        "accessModifier" : "",
+        "methodsCalled" : [ ],
+        "usedEntities" : [ ],
+        "annotations" : [ ],
+        "returnType" : "List<Optional<AppDTO>>",
+        "description" : null,
+        "methodDefinition" : "List<Optional<AppDTO>> getAllApps();"
+      }, {
+        "name" : "getAppById",
+        "body" : "{\n}",
+        "arguments" : [ "Long id" ],
+        "accessModifier" : "",
+        "methodsCalled" : [ ],
+        "usedEntities" : [ ],
+        "annotations" : [ ],
+        "returnType" : "Optional<AppDTO>",
+        "description" : null,
+        "methodDefinition" : "Optional<AppDTO> getAppById(Long id);"
+      }, {
+        "name" : "updateApp",
+        "body" : "{\n}",
+        "arguments" : [ "Long id", "AppDTO dto" ],
+        "accessModifier" : "",
+        "methodsCalled" : [ ],
+        "usedEntities" : [ ],
+        "annotations" : [ ],
+        "returnType" : "Optional<AppDTO>",
+        "description" : null,
+        "methodDefinition" : "Optional<AppDTO> updateApp(Long id, AppDTO dto);"
+      }, {
+        "name" : "deleteAppById",
+        "body" : "{\n}",
+        "arguments" : [ "Long id" ],
+        "accessModifier" : "",
+        "methodsCalled" : [ ],
+        "usedEntities" : [ ],
+        "annotations" : [ ],
+        "returnType" : "void",
+        "description" : null,
+        "methodDefinition" : "void deleteAppById(Long id);"
+      } ],
+      "fields" : [ ],
+      "constructors" : [ ],
+      "extends" : null,
+      "childEntity" : null,
+      "accessSpecifier" : "PUBLIC",
+      "imports" : [ {
+        "dereferencedParts" : [ ],
+        "name" : "java.util.List"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "java.util.Optional"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "br.com.example.davidarchanjo.model.dto.AppDTO"
+      } ]
+    } ],
+    "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/service/AppService.java",
+    "name" : "br.com.example.davidarchanjo.service.AppService"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "lombok.AllArgsConstructor"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.http.HttpHeaders"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.http.HttpStatus"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.http.ResponseEntity"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.web.bind.annotation"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.web.util.UriComponents"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.web.util.UriComponentsBuilder"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "javax.validation.Valid"
+  } ],
+  "entities" : [ {
+    "name" : "AppController",
+    "description" : null,
+    "annotations" : [ "RestController", "AllArgsConstructor", "RequestMapping" ],
+    "methods" : [ {
+      "name" : "create",
+      "body" : "{\n    Long appId = service.createNewApp(dto);\n    UriComponents uriComponents = uriComponentsBuilder.path(\"/api/v1/apps/{id}\").buildAndExpand(appId);\n    HttpHeaders headers = new HttpHeaders();\n    headers.setLocation(uriComponents.toUri());\n    return new ResponseEntity<>(headers, HttpStatus.CREATED);\n}",
+      "arguments" : [ "@Valid @RequestBody AppDTO dto", "UriComponentsBuilder uriComponentsBuilder" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "createNewApp",
+        "arguments" : [ "dto" ]
+      }, {
+        "name" : "buildAndExpand",
+        "arguments" : [ "appId" ]
+      }, {
+        "name" : "path",
+        "arguments" : [ "\"/api/v1/apps/{id}\"" ]
+      }, {
+        "name" : "setLocation",
+        "arguments" : [ "uriComponents.toUri()" ]
+      }, {
+        "name" : "toUri",
+        "arguments" : [ ]
+      } ],
+      "usedEntities" : [ "service", "dto", "uriComponentsBuilder", "appId", "headers", "uriComponents", "HttpStatus" ],
+      "annotations" : [ "PostMapping" ],
+      "returnType" : "ResponseEntity<?>",
+      "description" : null,
+      "methodDefinition" : "@PostMapping\npublic ResponseEntity<?> create(@Valid @RequestBody AppDTO dto, UriComponentsBuilder uriComponentsBuilder) {\n    Long appId = service.createNewApp(dto);\n    UriComponents uriComponents = uriComponentsBuilder.path(\"/api/v1/apps/{id}\").buildAndExpand(appId);\n    HttpHeaders headers = new HttpHeaders();\n    headers.setLocation(uriComponents.toUri());\n    return new ResponseEntity<>(headers, HttpStatus.CREATED);\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/controller/AppController.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    }, {
+      "name" : "getAll",
+      "body" : "{\n    return ResponseEntity.ok(service.getAllApps());\n}",
+      "arguments" : [ ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "ok",
+        "arguments" : [ "service.getAllApps()" ]
+      }, {
+        "name" : "getAllApps",
+        "arguments" : [ ]
+      } ],
+      "usedEntities" : [ "ResponseEntity", "service" ],
+      "annotations" : [ "GetMapping" ],
+      "returnType" : "ResponseEntity<?>",
+      "description" : null,
+      "methodDefinition" : "@GetMapping\npublic ResponseEntity<?> getAll() {\n    return ResponseEntity.ok(service.getAllApps());\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/controller/AppController.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    }, {
+      "name" : "findById",
+      "body" : "{\n    return ResponseEntity.ok(service.getAppById(id));\n}",
+      "arguments" : [ "@PathVariable Long id" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "ok",
+        "arguments" : [ "service.getAppById(id)" ]
+      }, {
+        "name" : "getAppById",
+        "arguments" : [ "id" ]
+      } ],
+      "usedEntities" : [ "ResponseEntity", "service", "id" ],
+      "annotations" : [ "GetMapping" ],
+      "returnType" : "ResponseEntity<?>",
+      "description" : null,
+      "methodDefinition" : "@GetMapping(\"/{id}\")\npublic ResponseEntity<?> findById(@PathVariable Long id) {\n    return ResponseEntity.ok(service.getAppById(id));\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/controller/AppController.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    }, {
+      "name" : "update",
+      "body" : "{\n    service.updateApp(id, dto);\n    return ResponseEntity.noContent().build();\n}",
+      "arguments" : [ "@PathVariable Long id", "@Valid @RequestBody AppDTO dto" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "updateApp",
+        "arguments" : [ "id", "dto" ]
+      }, {
+        "name" : "build",
+        "arguments" : [ ]
+      }, {
+        "name" : "noContent",
+        "arguments" : [ ]
+      } ],
+      "usedEntities" : [ "service", "id", "dto", "ResponseEntity" ],
+      "annotations" : [ "PutMapping" ],
+      "returnType" : "ResponseEntity<?>",
+      "description" : null,
+      "methodDefinition" : "@PutMapping(\"/{id}\")\npublic ResponseEntity<?> update(@PathVariable Long id, @Valid @RequestBody AppDTO dto) {\n    service.updateApp(id, dto);\n    return ResponseEntity.noContent().build();\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/controller/AppController.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    }, {
+      "name" : "delete",
+      "body" : "{\n    service.deleteAppById(id);\n    return ResponseEntity.ok().build();\n}",
+      "arguments" : [ "@PathVariable Long id" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "deleteAppById",
+        "arguments" : [ "id" ]
+      }, {
+        "name" : "build",
+        "arguments" : [ ]
+      }, {
+        "name" : "ok",
+        "arguments" : [ ]
+      } ],
+      "usedEntities" : [ "service", "id", "ResponseEntity" ],
+      "annotations" : [ "DeleteMapping" ],
+      "returnType" : "ResponseEntity<?>",
+      "description" : null,
+      "methodDefinition" : "@DeleteMapping(\"/{id}\")\npublic ResponseEntity<?> delete(@PathVariable Long id) {\n    service.deleteAppById(id);\n    return ResponseEntity.ok().build();\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/controller/AppController.java",
+      "test_exists" : true,
+      "test_functions" : {
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/integration/AppIntegrationTest.java" : {
+          "whenDeleteKnownAppShouldNotBeFoundAnymore" : {
+            "definition" : "@Test\n@Order(3)\n@DisplayName(\"When Delete Known App Should Not Be Found Anymore\")\npublic void whenDeleteKnownAppShouldNotBeFoundAnymore() {\n    ResponseEntity<JsonNode> firstResult = testRestTemplate.getForEntity(baseUrl + \"/1\", JsonNode.class);\n    assertThat(firstResult.getBody(), notNullValue());\n    assertThat(firstResult.getStatusCode(), is(HttpStatus.OK));\n    testRestTemplate.delete(baseUrl + \"/1\");\n    ResponseEntity<JsonNode> secondResult = testRestTemplate.getForEntity(baseUrl + \"/1\", JsonNode.class);\n    assertThat(secondResult.getStatusCode(), is(HttpStatus.NOT_FOUND));\n}"
+          }
+        }
+      }
+    } ],
+    "fields" : [ {
+      "name" : "service",
+      "accessModifier" : "private final",
+      "value" : null,
+      "type" : "AppService",
+      "description" : null
+    } ],
+    "constructors" : [ ],
+    "extends" : null,
+    "childEntity" : null,
+    "accessSpecifier" : "PUBLIC"
+  } ],
+  "samePackageClasses" : [ ]
+}, {
+  "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/repository/AppRepository.java",
+  "packageName" : "br.com.example.davidarchanjo.repository",
+  "imports" : [ {
+    "dereferencedParts" : [ {
+      "name" : "App",
+      "description" : null,
+      "annotations" : [ "Data", "Entity", "NoArgsConstructor", "Table" ],
+      "methods" : [ ],
+      "fields" : [ {
+        "name" : "id",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "Long",
+        "description" : null
+      }, {
+        "name" : "author",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      }, {
+        "name" : "name",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      }, {
+        "name" : "version",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      } ],
+      "constructors" : [ {
+        "name" : "App",
+        "body" : "{\n    this.id = id;\n    this.author = author;\n    this.name = name;\n    this.version = version;\n}",
+        "arguments" : [ "Long id", "String author", "String name", "String version" ],
+        "accessModifier" : "public",
+        "methodsCalled" : [ ],
+        "usedEntities" : [ "id", "author", "name", "version" ],
+        "annotations" : [ "Builder" ],
+        "description" : null,
+        "methodDefinition" : "@Builder\npublic App(Long id, String author, String name, String version) {\n    this.id = id;\n    this.author = author;\n    this.name = name;\n    this.version = version;\n}"
+      } ],
+      "extends" : null,
+      "childEntity" : null,
+      "accessSpecifier" : "PUBLIC",
+      "imports" : [ {
+        "dereferencedParts" : [ ],
+        "name" : "javax.persistence.Entity"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "javax.persistence.GeneratedValue"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "javax.persistence.Id"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "javax.persistence.Table"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "lombok.Builder"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "lombok.Data"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "lombok.NoArgsConstructor"
+      } ]
+    } ],
+    "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/domain/App.java",
+    "name" : "br.com.example.davidarchanjo.model.domain.App"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.data.jpa.repository.JpaRepository"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.stereotype.Repository"
+  } ],
+  "entities" : [ {
+    "name" : "AppRepository",
+    "description" : null,
+    "annotations" : [ "Repository" ],
+    "methods" : [ ],
+    "fields" : [ ],
+    "constructors" : [ ],
+    "extends" : null,
+    "childEntity" : null,
+    "accessSpecifier" : "PUBLIC"
+  } ],
+  "samePackageClasses" : [ ]
+}, {
+  "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/config/AppConfig.java",
+  "packageName" : "br.com.example.davidarchanjo.config",
+  "imports" : [ {
+    "dereferencedParts" : [ ],
+    "name" : "org.modelmapper.ModelMapper"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.context.annotation.Bean"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.context.annotation.Configuration"
+  } ],
+  "entities" : [ {
+    "name" : "AppConfig",
+    "description" : null,
+    "annotations" : [ "Configuration" ],
+    "methods" : [ {
+      "name" : "modelMapper",
+      "body" : "{\n    ModelMapper modelMapper = new ModelMapper();\n    // ignore null attributes on the source object on copying\n    modelMapper.getConfiguration().setSkipNullEnabled(true);\n    return modelMapper;\n}",
+      "arguments" : [ ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "setSkipNullEnabled",
+        "arguments" : [ "true" ]
+      }, {
+        "name" : "getConfiguration",
+        "arguments" : [ ]
+      } ],
+      "usedEntities" : [ "modelMapper" ],
+      "annotations" : [ "Bean" ],
+      "returnType" : "ModelMapper",
+      "description" : null,
+      "methodDefinition" : "@Bean\npublic ModelMapper modelMapper() {\n    ModelMapper modelMapper = new ModelMapper();\n    // ignore null attributes on the source object on copying\n    modelMapper.getConfiguration().setSkipNullEnabled(true);\n    return modelMapper;\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/config/AppConfig.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    } ],
+    "fields" : [ ],
+    "constructors" : [ ],
+    "extends" : null,
+    "childEntity" : null,
+    "accessSpecifier" : "PUBLIC"
+  } ],
+  "samePackageClasses" : [ ]
+}, {
+  "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/dto/AppDTO.java",
+  "packageName" : "br.com.example.davidarchanjo.model.dto",
+  "imports" : [ {
+    "dereferencedParts" : [ ],
+    "name" : "com.fasterxml.jackson.annotation.JsonProperty"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "lombok"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "javax.validation.constraints.NotEmpty"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "javax.validation.constraints.Size"
+  } ],
+  "entities" : [ {
+    "name" : "AppDTO",
+    "description" : null,
+    "annotations" : [ "Data", "NoArgsConstructor" ],
+    "methods" : [ {
+      "name" : "equals",
+      "body" : "{\n    if (this == obj)\n        return true;\n    if (obj == null)\n        return false;\n    if (getClass() != obj.getClass())\n        return false;\n    AppDTO other = (AppDTO) obj;\n    if (name == null) {\n        if (other.name != null)\n            return false;\n    } else if (!name.equals(other.name))\n        return false;\n    if (version == null) {\n        if (other.version != null)\n            return false;\n    } else if (!version.equals(other.version))\n        return false;\n    if (author == null) {\n        if (other.author != null)\n            return false;\n    } else if (!author.equals(other.author))\n        return false;\n    return true;\n}",
+      "arguments" : [ "Object obj" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "getClass",
+        "arguments" : [ ]
+      }, {
+        "name" : "getClass",
+        "arguments" : [ ]
+      }, {
+        "name" : "equals",
+        "arguments" : [ "other.name" ]
+      }, {
+        "name" : "equals",
+        "arguments" : [ "other.version" ]
+      }, {
+        "name" : "equals",
+        "arguments" : [ "other.author" ]
+      } ],
+      "usedEntities" : [ "obj", "name", "other", "version", "author" ],
+      "annotations" : [ "Override" ],
+      "returnType" : "boolean",
+      "description" : null,
+      "methodDefinition" : "@Override\npublic boolean equals(Object obj) {\n    if (this == obj)\n        return true;\n    if (obj == null)\n        return false;\n    if (getClass() != obj.getClass())\n        return false;\n    AppDTO other = (AppDTO) obj;\n    if (name == null) {\n        if (other.name != null)\n            return false;\n    } else if (!name.equals(other.name))\n        return false;\n    if (version == null) {\n        if (other.version != null)\n            return false;\n    } else if (!version.equals(other.version))\n        return false;\n    if (author == null) {\n        if (other.author != null)\n            return false;\n    } else if (!author.equals(other.author))\n        return false;\n    return true;\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/dto/AppDTO.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    }, {
+      "name" : "hashCode",
+      "body" : "{\n    final int prime = 31;\n    int result = 1;\n    result = prime * result + ((name == null) ? 0 : name.hashCode());\n    result = prime * result + ((version == null) ? 0 : version.hashCode());\n    result = prime * result + ((author == null) ? 0 : author.hashCode());\n    return result;\n}",
+      "arguments" : [ ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "hashCode",
+        "arguments" : [ ]
+      }, {
+        "name" : "hashCode",
+        "arguments" : [ ]
+      }, {
+        "name" : "hashCode",
+        "arguments" : [ ]
+      } ],
+      "usedEntities" : [ "result", "prime", "name", "version", "author" ],
+      "annotations" : [ "Override" ],
+      "returnType" : "int",
+      "description" : null,
+      "methodDefinition" : "@Override\npublic int hashCode() {\n    final int prime = 31;\n    int result = 1;\n    result = prime * result + ((name == null) ? 0 : name.hashCode());\n    result = prime * result + ((version == null) ? 0 : version.hashCode());\n    result = prime * result + ((author == null) ? 0 : author.hashCode());\n    return result;\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/dto/AppDTO.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    }, {
+      "name" : "toString",
+      "body" : "{\n    return \"AppDTO [name=\" + name + \", version=\" + version + \", author=\" + author + \"]\";\n}",
+      "arguments" : [ ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ "name", "version", "author" ],
+      "annotations" : [ "Override" ],
+      "returnType" : "String",
+      "description" : null,
+      "methodDefinition" : "@Override\npublic String toString() {\n    return \"AppDTO [name=\" + name + \", version=\" + version + \", author=\" + author + \"]\";\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/dto/AppDTO.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    } ],
+    "fields" : [ {
+      "name" : "name",
+      "accessModifier" : "private",
+      "value" : null,
+      "type" : "String",
+      "description" : null
+    }, {
+      "name" : "version",
+      "accessModifier" : "private",
+      "value" : null,
+      "type" : "String",
+      "description" : null
+    }, {
+      "name" : "author",
+      "accessModifier" : "private",
+      "value" : null,
+      "type" : "String",
+      "description" : null
+    } ],
+    "constructors" : [ {
+      "name" : "AppDTO",
+      "body" : "{\n    this.name = name;\n    this.version = version;\n    this.author = author;\n}",
+      "arguments" : [ "String name", "String version", "String author" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ "name", "version", "author" ],
+      "annotations" : [ "Builder" ],
+      "description" : null,
+      "methodDefinition" : "@Builder\npublic AppDTO(String name, String version, String author) {\n    this.name = name;\n    this.version = version;\n    this.author = author;\n}"
+    } ],
+    "extends" : null,
+    "childEntity" : null,
+    "accessSpecifier" : "PUBLIC"
+  } ],
+  "samePackageClasses" : [ ]
+}, {
+  "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/domain/App.java",
+  "packageName" : "br.com.example.davidarchanjo.model.domain",
+  "imports" : [ {
+    "dereferencedParts" : [ ],
+    "name" : "javax.persistence.Entity"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "javax.persistence.GeneratedValue"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "javax.persistence.Id"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "javax.persistence.Table"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "lombok.Builder"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "lombok.Data"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "lombok.NoArgsConstructor"
+  } ],
+  "entities" : [ {
+    "name" : "App",
+    "description" : null,
+    "annotations" : [ "Data", "Entity", "NoArgsConstructor", "Table" ],
+    "methods" : [ {
+      "name" : "getId",
+      "body" : "{\n    return id;\n}",
+      "arguments" : [ ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ "id" ],
+      "annotations" : [ ],
+      "returnType" : "Long",
+      "description" : null,
+      "methodDefinition" : "public Long getId() {\n    return id;\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/domain/App.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    }, {
+      "name" : "setId",
+      "body" : "{\n    this.id = id;\n}",
+      "arguments" : [ "Long id" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ "id" ],
+      "annotations" : [ ],
+      "returnType" : "void",
+      "description" : null,
+      "methodDefinition" : "public void setId(Long id) {\n    this.id = id;\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/domain/App.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    }, {
+      "name" : "getAuthor",
+      "body" : "{\n    return author;\n}",
+      "arguments" : [ ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ "author" ],
+      "annotations" : [ ],
+      "returnType" : "String",
+      "description" : null,
+      "methodDefinition" : "// Getter and Setter for author\npublic String getAuthor() {\n    return author;\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/domain/App.java",
+      "test_exists" : true,
+      "test_functions" : {
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/controller/AppControllerTest.java" : {
+          "shouldCreateNewAppSuccessfully" : {
+            "definition" : "@Test\n@Order(1)\n@DisplayName(\"Should Create New App Successfully\")\npublic void shouldCreateNewAppSuccessfully() throws Exception {\n    Optional<AppDTO> dto = Optional.of(createAppDto(\"awesome-app\", \"1.0.0\", \"Java Duke\"));\n    when(service.createNewApp(argumentCaptor.capture())).thenReturn(1L);\n    mockMvc.perform(post(urlTemplate).contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(dto))).andExpect(status().isCreated()).andExpect(header().exists(\"Location\")).andExpect(header().string(\"Location\", \"http://localhost/api/v1/apps/1\"));\n    assertThat(argumentCaptor.getValue().getName(), is(\"awesome-app\"));\n    assertThat(argumentCaptor.getValue().getAuthor(), is(\"Java Duke\"));\n    assertThat(argumentCaptor.getValue().getVersion(), is(\"1.0.0\"));\n}"
+          },
+          "shouldUpdateAppWithKnownIdSuccessfully" : {
+            "definition" : "@Test\n@Order(5)\n@DisplayName(\"Should Update App With Known IdSuccessfully\")\npublic void shouldUpdateAppWithKnownIdSuccessfully() throws Exception {\n    Optional<AppDTO> stub = Optional.of(createAppDto(\"twitter\", \"0.1.0\", \"Java Duke\"));\n    AppDTO dto = createAppDto(\"twitter\", \"0.1.0\", \"Java Duke\");\n    when(service.updateApp(eq(1L), argumentCaptor.capture())).thenReturn(stub);\n    mockMvc.perform(put(urlTemplate + \"/1\").contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(dto))).andDo(print()).andExpect(status().isNoContent());\n    assertThat(argumentCaptor.getValue().getName(), is(\"twitter\"));\n    assertThat(argumentCaptor.getValue().getAuthor(), is(\"Java Duke\"));\n    assertThat(argumentCaptor.getValue().getVersion(), is(\"0.1.0\"));\n}"
+          }
+        },
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/integration/AppIntegrationTest.java" : {
+          "whenUpdateKnownAppShouldConfirmChanges" : {
+            "definition" : "@Test\n@Order(2)\n@DisplayName(\"When Update Known App Should Confirm Changes\")\npublic void whenUpdateKnownAppShouldConfirmChanges() {\n    AppDTO originalDto = testRestTemplate.getForObject(baseUrl + \"/1\", AppDTO.class);\n    assertThat(originalDto, notNullValue());\n    AppDTO dto = AppUtils.createAppDto(originalDto.getName(), \"0.2.0-SNAPSHOT\", \"Java Duke\");\n    testRestTemplate.put(baseUrl + \"/1\", dto);\n    AppDTO updatedDto = testRestTemplate.getForObject(baseUrl + \"/1\", AppDTO.class);\n    assertThat(updatedDto, notNullValue());\n    // both names must be equal since the change was made on the original author and version\n    assertThat(updatedDto.getName(), is(originalDto.getName()));\n    // must be different because it was changed\n    assertThat(updatedDto.getAuthor(), not(originalDto.getAuthor()));\n    // must be different because it was changed\n    assertThat(updatedDto.getVersion(), not(originalDto.getVersion()));\n}"
+          }
+        }
+      }
+    }, {
+      "name" : "setAuthor",
+      "body" : "{\n    this.author = author;\n}",
+      "arguments" : [ "String author" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ "author" ],
+      "annotations" : [ ],
+      "returnType" : "void",
+      "description" : null,
+      "methodDefinition" : "public void setAuthor(String author) {\n    this.author = author;\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/domain/App.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    }, {
+      "name" : "getName",
+      "body" : "{\n    return name;\n}",
+      "arguments" : [ ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ "name" ],
+      "annotations" : [ ],
+      "returnType" : "String",
+      "description" : null,
+      "methodDefinition" : "// Getter and Setter for name\npublic String getName() {\n    return name;\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/domain/App.java",
+      "test_exists" : true,
+      "test_functions" : {
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/controller/AppControllerTest.java" : {
+          "shouldCreateNewAppSuccessfully" : {
+            "definition" : "@Test\n@Order(1)\n@DisplayName(\"Should Create New App Successfully\")\npublic void shouldCreateNewAppSuccessfully() throws Exception {\n    Optional<AppDTO> dto = Optional.of(createAppDto(\"awesome-app\", \"1.0.0\", \"Java Duke\"));\n    when(service.createNewApp(argumentCaptor.capture())).thenReturn(1L);\n    mockMvc.perform(post(urlTemplate).contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(dto))).andExpect(status().isCreated()).andExpect(header().exists(\"Location\")).andExpect(header().string(\"Location\", \"http://localhost/api/v1/apps/1\"));\n    assertThat(argumentCaptor.getValue().getName(), is(\"awesome-app\"));\n    assertThat(argumentCaptor.getValue().getAuthor(), is(\"Java Duke\"));\n    assertThat(argumentCaptor.getValue().getVersion(), is(\"1.0.0\"));\n}"
+          },
+          "shouldUpdateAppWithKnownIdSuccessfully" : {
+            "definition" : "@Test\n@Order(5)\n@DisplayName(\"Should Update App With Known IdSuccessfully\")\npublic void shouldUpdateAppWithKnownIdSuccessfully() throws Exception {\n    Optional<AppDTO> stub = Optional.of(createAppDto(\"twitter\", \"0.1.0\", \"Java Duke\"));\n    AppDTO dto = createAppDto(\"twitter\", \"0.1.0\", \"Java Duke\");\n    when(service.updateApp(eq(1L), argumentCaptor.capture())).thenReturn(stub);\n    mockMvc.perform(put(urlTemplate + \"/1\").contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(dto))).andDo(print()).andExpect(status().isNoContent());\n    assertThat(argumentCaptor.getValue().getName(), is(\"twitter\"));\n    assertThat(argumentCaptor.getValue().getAuthor(), is(\"Java Duke\"));\n    assertThat(argumentCaptor.getValue().getVersion(), is(\"0.1.0\"));\n}"
+          }
+        },
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/integration/AppIntegrationTest.java" : {
+          "whenUpdateKnownAppShouldConfirmChanges" : {
+            "definition" : "@Test\n@Order(2)\n@DisplayName(\"When Update Known App Should Confirm Changes\")\npublic void whenUpdateKnownAppShouldConfirmChanges() {\n    AppDTO originalDto = testRestTemplate.getForObject(baseUrl + \"/1\", AppDTO.class);\n    assertThat(originalDto, notNullValue());\n    AppDTO dto = AppUtils.createAppDto(originalDto.getName(), \"0.2.0-SNAPSHOT\", \"Java Duke\");\n    testRestTemplate.put(baseUrl + \"/1\", dto);\n    AppDTO updatedDto = testRestTemplate.getForObject(baseUrl + \"/1\", AppDTO.class);\n    assertThat(updatedDto, notNullValue());\n    // both names must be equal since the change was made on the original author and version\n    assertThat(updatedDto.getName(), is(originalDto.getName()));\n    // must be different because it was changed\n    assertThat(updatedDto.getAuthor(), not(originalDto.getAuthor()));\n    // must be different because it was changed\n    assertThat(updatedDto.getVersion(), not(originalDto.getVersion()));\n}"
+          }
+        }
+      }
+    }, {
+      "name" : "setName",
+      "body" : "{\n    this.name = name;\n}",
+      "arguments" : [ "String name" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ "name" ],
+      "annotations" : [ ],
+      "returnType" : "void",
+      "description" : null,
+      "methodDefinition" : "public void setName(String name) {\n    this.name = name;\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/domain/App.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    }, {
+      "name" : "getVersion",
+      "body" : "{\n    return version;\n}",
+      "arguments" : [ ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ "version" ],
+      "annotations" : [ ],
+      "returnType" : "String",
+      "description" : null,
+      "methodDefinition" : "// Getter and Setter for version\npublic String getVersion() {\n    return version;\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/domain/App.java",
+      "test_exists" : true,
+      "test_functions" : {
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/controller/AppControllerTest.java" : {
+          "shouldCreateNewAppSuccessfully" : {
+            "definition" : "@Test\n@Order(1)\n@DisplayName(\"Should Create New App Successfully\")\npublic void shouldCreateNewAppSuccessfully() throws Exception {\n    Optional<AppDTO> dto = Optional.of(createAppDto(\"awesome-app\", \"1.0.0\", \"Java Duke\"));\n    when(service.createNewApp(argumentCaptor.capture())).thenReturn(1L);\n    mockMvc.perform(post(urlTemplate).contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(dto))).andExpect(status().isCreated()).andExpect(header().exists(\"Location\")).andExpect(header().string(\"Location\", \"http://localhost/api/v1/apps/1\"));\n    assertThat(argumentCaptor.getValue().getName(), is(\"awesome-app\"));\n    assertThat(argumentCaptor.getValue().getAuthor(), is(\"Java Duke\"));\n    assertThat(argumentCaptor.getValue().getVersion(), is(\"1.0.0\"));\n}"
+          },
+          "shouldUpdateAppWithKnownIdSuccessfully" : {
+            "definition" : "@Test\n@Order(5)\n@DisplayName(\"Should Update App With Known IdSuccessfully\")\npublic void shouldUpdateAppWithKnownIdSuccessfully() throws Exception {\n    Optional<AppDTO> stub = Optional.of(createAppDto(\"twitter\", \"0.1.0\", \"Java Duke\"));\n    AppDTO dto = createAppDto(\"twitter\", \"0.1.0\", \"Java Duke\");\n    when(service.updateApp(eq(1L), argumentCaptor.capture())).thenReturn(stub);\n    mockMvc.perform(put(urlTemplate + \"/1\").contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(dto))).andDo(print()).andExpect(status().isNoContent());\n    assertThat(argumentCaptor.getValue().getName(), is(\"twitter\"));\n    assertThat(argumentCaptor.getValue().getAuthor(), is(\"Java Duke\"));\n    assertThat(argumentCaptor.getValue().getVersion(), is(\"0.1.0\"));\n}"
+          }
+        },
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/integration/AppIntegrationTest.java" : {
+          "whenUpdateKnownAppShouldConfirmChanges" : {
+            "definition" : "@Test\n@Order(2)\n@DisplayName(\"When Update Known App Should Confirm Changes\")\npublic void whenUpdateKnownAppShouldConfirmChanges() {\n    AppDTO originalDto = testRestTemplate.getForObject(baseUrl + \"/1\", AppDTO.class);\n    assertThat(originalDto, notNullValue());\n    AppDTO dto = AppUtils.createAppDto(originalDto.getName(), \"0.2.0-SNAPSHOT\", \"Java Duke\");\n    testRestTemplate.put(baseUrl + \"/1\", dto);\n    AppDTO updatedDto = testRestTemplate.getForObject(baseUrl + \"/1\", AppDTO.class);\n    assertThat(updatedDto, notNullValue());\n    // both names must be equal since the change was made on the original author and version\n    assertThat(updatedDto.getName(), is(originalDto.getName()));\n    // must be different because it was changed\n    assertThat(updatedDto.getAuthor(), not(originalDto.getAuthor()));\n    // must be different because it was changed\n    assertThat(updatedDto.getVersion(), not(originalDto.getVersion()));\n}"
+          }
+        }
+      }
+    }, {
+      "name" : "setVersion",
+      "body" : "{\n    this.version = version;\n}",
+      "arguments" : [ "String version" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ "version" ],
+      "annotations" : [ ],
+      "returnType" : "void",
+      "description" : null,
+      "methodDefinition" : "public void setVersion(String version) {\n    this.version = version;\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/domain/App.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    }, {
+      "name" : "equals",
+      "body" : "{\n    if (this == obj)\n        return true;\n    if (obj == null)\n        return false;\n    if (getClass() != obj.getClass())\n        return false;\n    App other = (App) obj;\n    if (id == null) {\n        if (other.id != null)\n            return false;\n    } else if (!id.equals(other.id))\n        return false;\n    if (author == null) {\n        if (other.author != null)\n            return false;\n    } else if (!author.equals(other.author))\n        return false;\n    if (name == null) {\n        if (other.name != null)\n            return false;\n    } else if (!name.equals(other.name))\n        return false;\n    if (version == null) {\n        if (other.version != null)\n            return false;\n    } else if (!version.equals(other.version))\n        return false;\n    return true;\n}",
+      "arguments" : [ "Object obj" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "getClass",
+        "arguments" : [ ]
+      }, {
+        "name" : "getClass",
+        "arguments" : [ ]
+      }, {
+        "name" : "equals",
+        "arguments" : [ "other.id" ]
+      }, {
+        "name" : "equals",
+        "arguments" : [ "other.author" ]
+      }, {
+        "name" : "equals",
+        "arguments" : [ "other.name" ]
+      }, {
+        "name" : "equals",
+        "arguments" : [ "other.version" ]
+      } ],
+      "usedEntities" : [ "obj", "id", "other", "author", "name", "version" ],
+      "annotations" : [ "Override" ],
+      "returnType" : "boolean",
+      "description" : null,
+      "methodDefinition" : "@Override\npublic boolean equals(Object obj) {\n    if (this == obj)\n        return true;\n    if (obj == null)\n        return false;\n    if (getClass() != obj.getClass())\n        return false;\n    App other = (App) obj;\n    if (id == null) {\n        if (other.id != null)\n            return false;\n    } else if (!id.equals(other.id))\n        return false;\n    if (author == null) {\n        if (other.author != null)\n            return false;\n    } else if (!author.equals(other.author))\n        return false;\n    if (name == null) {\n        if (other.name != null)\n            return false;\n    } else if (!name.equals(other.name))\n        return false;\n    if (version == null) {\n        if (other.version != null)\n            return false;\n    } else if (!version.equals(other.version))\n        return false;\n    return true;\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/domain/App.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    }, {
+      "name" : "hashCode",
+      "body" : "{\n    final int prime = 31;\n    int result = 1;\n    result = prime * result + ((id == null) ? 0 : id.hashCode());\n    result = prime * result + ((author == null) ? 0 : author.hashCode());\n    result = prime * result + ((name == null) ? 0 : name.hashCode());\n    result = prime * result + ((version == null) ? 0 : version.hashCode());\n    return result;\n}",
+      "arguments" : [ ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "hashCode",
+        "arguments" : [ ]
+      }, {
+        "name" : "hashCode",
+        "arguments" : [ ]
+      }, {
+        "name" : "hashCode",
+        "arguments" : [ ]
+      }, {
+        "name" : "hashCode",
+        "arguments" : [ ]
+      } ],
+      "usedEntities" : [ "result", "prime", "id", "author", "name", "version" ],
+      "annotations" : [ "Override" ],
+      "returnType" : "int",
+      "description" : null,
+      "methodDefinition" : "@Override\npublic int hashCode() {\n    final int prime = 31;\n    int result = 1;\n    result = prime * result + ((id == null) ? 0 : id.hashCode());\n    result = prime * result + ((author == null) ? 0 : author.hashCode());\n    result = prime * result + ((name == null) ? 0 : name.hashCode());\n    result = prime * result + ((version == null) ? 0 : version.hashCode());\n    return result;\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/domain/App.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    }, {
+      "name" : "toString",
+      "body" : "{\n    return \"App [id=\" + id + \", author=\" + author + \", name=\" + name + \", version=\" + version + \"]\";\n}",
+      "arguments" : [ ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ "id", "author", "name", "version" ],
+      "annotations" : [ "Override" ],
+      "returnType" : "String",
+      "description" : null,
+      "methodDefinition" : "@Override\npublic String toString() {\n    return \"App [id=\" + id + \", author=\" + author + \", name=\" + name + \", version=\" + version + \"]\";\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/domain/App.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    } ],
+    "fields" : [ {
+      "name" : "id",
+      "accessModifier" : "private",
+      "value" : null,
+      "type" : "Long",
+      "description" : null
+    }, {
+      "name" : "author",
+      "accessModifier" : "private",
+      "value" : null,
+      "type" : "String",
+      "description" : null
+    }, {
+      "name" : "name",
+      "accessModifier" : "private",
+      "value" : null,
+      "type" : "String",
+      "description" : null
+    }, {
+      "name" : "version",
+      "accessModifier" : "private",
+      "value" : null,
+      "type" : "String",
+      "description" : null
+    } ],
+    "constructors" : [ {
+      "name" : "App",
+      "body" : "{\n    this.id = id;\n    this.author = author;\n    this.name = name;\n    this.version = version;\n}",
+      "arguments" : [ "Long id", "String author", "String name", "String version" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ "id", "author", "name", "version" ],
+      "annotations" : [ "Builder" ],
+      "description" : null,
+      "methodDefinition" : "@Builder\npublic App(Long id, String author, String name, String version) {\n    this.id = id;\n    this.author = author;\n    this.name = name;\n    this.version = version;\n}"
+    } ],
+    "extends" : null,
+    "childEntity" : null,
+    "accessSpecifier" : "PUBLIC"
+  } ],
+  "samePackageClasses" : [ ]
+}, {
+  "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/builder/AppBuilder.java",
+  "packageName" : "br.com.example.davidarchanjo.builder",
+  "imports" : [ {
+    "dereferencedParts" : [ ],
+    "name" : "java.util.Optional"
+  }, {
+    "dereferencedParts" : [ {
+      "name" : "App",
+      "description" : null,
+      "annotations" : [ "Data", "Entity", "NoArgsConstructor", "Table" ],
+      "methods" : [ ],
+      "fields" : [ {
+        "name" : "id",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "Long",
+        "description" : null
+      }, {
+        "name" : "author",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      }, {
+        "name" : "name",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      }, {
+        "name" : "version",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      } ],
+      "constructors" : [ {
+        "name" : "App",
+        "body" : "{\n    this.id = id;\n    this.author = author;\n    this.name = name;\n    this.version = version;\n}",
+        "arguments" : [ "Long id", "String author", "String name", "String version" ],
+        "accessModifier" : "public",
+        "methodsCalled" : [ ],
+        "usedEntities" : [ "id", "author", "name", "version" ],
+        "annotations" : [ "Builder" ],
+        "description" : null,
+        "methodDefinition" : "@Builder\npublic App(Long id, String author, String name, String version) {\n    this.id = id;\n    this.author = author;\n    this.name = name;\n    this.version = version;\n}"
+      } ],
+      "extends" : null,
+      "childEntity" : null,
+      "accessSpecifier" : "PUBLIC",
+      "imports" : [ {
+        "dereferencedParts" : [ ],
+        "name" : "javax.persistence.Entity"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "javax.persistence.GeneratedValue"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "javax.persistence.Id"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "javax.persistence.Table"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "lombok.Builder"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "lombok.Data"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "lombok.NoArgsConstructor"
+      } ]
+    } ],
+    "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/domain/App.java",
+    "name" : "br.com.example.davidarchanjo.model.domain.App"
+  }, {
+    "dereferencedParts" : [ {
+      "name" : "AppDTO",
+      "description" : null,
+      "annotations" : [ "Data", "NoArgsConstructor" ],
+      "methods" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      }, {
+        "name" : "version",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      }, {
+        "name" : "author",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      } ],
+      "constructors" : [ {
+        "name" : "AppDTO",
+        "body" : "{\n    this.name = name;\n    this.version = version;\n    this.author = author;\n}",
+        "arguments" : [ "String name", "String version", "String author" ],
+        "accessModifier" : "public",
+        "methodsCalled" : [ ],
+        "usedEntities" : [ "name", "version", "author" ],
+        "annotations" : [ "Builder" ],
+        "description" : null,
+        "methodDefinition" : "@Builder\npublic AppDTO(String name, String version, String author) {\n    this.name = name;\n    this.version = version;\n    this.author = author;\n}"
+      } ],
+      "extends" : null,
+      "childEntity" : null,
+      "accessSpecifier" : "PUBLIC",
+      "imports" : [ {
+        "dereferencedParts" : [ ],
+        "name" : "com.fasterxml.jackson.annotation.JsonProperty"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "lombok"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "javax.validation.constraints.NotEmpty"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "javax.validation.constraints.Size"
+      } ]
+    } ],
+    "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/dto/AppDTO.java",
+    "name" : "br.com.example.davidarchanjo.model.dto.AppDTO"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.modelmapper.ModelMapper"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.stereotype.Component"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "lombok.AllArgsConstructor"
+  } ],
+  "entities" : [ {
+    "name" : "AppBuilder",
+    "description" : null,
+    "annotations" : [ "Component", "AllArgsConstructor" ],
+    "methods" : [ {
+      "name" : "build",
+      "body" : "{\n    App model = modelMapper.map(dto, App.class);\n    return model;\n}",
+      "arguments" : [ "AppDTO dto" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "map",
+        "arguments" : [ "dto", "App.class" ]
+      } ],
+      "usedEntities" : [ "modelMapper", "dto", "model" ],
+      "annotations" : [ ],
+      "returnType" : "App",
+      "description" : null,
+      "methodDefinition" : "public App build(AppDTO dto) {\n    App model = modelMapper.map(dto, App.class);\n    return model;\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/builder/AppBuilder.java",
+      "test_exists" : true,
+      "test_functions" : {
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/controller/AppControllerTest.java" : {
+          "setup" : {
+            "definition" : "@BeforeEach\npublic void setup() {\n    mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();\n}"
+          }
+        },
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/utils/AppUtils.java" : {
+          "createAppDto" : {
+            "definition" : "public static AppDTO createAppDto(String name, String version, String author) {\n    return AppDTO.builder().name(name).version(version).author(author).build();\n}"
+          }
+        }
+      }
+    }, {
+      "name" : "build",
+      "body" : "{\n    AppDTO dto = modelMapper.map(domain, AppDTO.class);\n    return Optional.of(dto);\n}",
+      "arguments" : [ "App domain" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "map",
+        "arguments" : [ "domain", "AppDTO.class" ]
+      }, {
+        "name" : "of",
+        "arguments" : [ "dto" ]
+      } ],
+      "usedEntities" : [ "modelMapper", "domain", "Optional", "dto" ],
+      "annotations" : [ ],
+      "returnType" : "Optional<AppDTO>",
+      "description" : null,
+      "methodDefinition" : "public Optional<AppDTO> build(App domain) {\n    AppDTO dto = modelMapper.map(domain, AppDTO.class);\n    return Optional.of(dto);\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/builder/AppBuilder.java",
+      "test_exists" : true,
+      "test_functions" : {
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/controller/AppControllerTest.java" : {
+          "setup" : {
+            "definition" : "@BeforeEach\npublic void setup() {\n    mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();\n}"
+          }
+        },
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/utils/AppUtils.java" : {
+          "createAppDto" : {
+            "definition" : "public static AppDTO createAppDto(String name, String version, String author) {\n    return AppDTO.builder().name(name).version(version).author(author).build();\n}"
+          }
+        }
+      }
+    }, {
+      "name" : "build",
+      "body" : "{\n    modelMapper.map(dto, domain);\n    return domain;\n}",
+      "arguments" : [ "AppDTO dto", "App domain" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "map",
+        "arguments" : [ "dto", "domain" ]
+      } ],
+      "usedEntities" : [ "modelMapper", "dto", "domain" ],
+      "annotations" : [ ],
+      "returnType" : "App",
+      "description" : null,
+      "methodDefinition" : "public App build(AppDTO dto, App domain) {\n    modelMapper.map(dto, domain);\n    return domain;\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/builder/AppBuilder.java",
+      "test_exists" : true,
+      "test_functions" : {
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/controller/AppControllerTest.java" : {
+          "setup" : {
+            "definition" : "@BeforeEach\npublic void setup() {\n    mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();\n}"
+          }
+        },
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/utils/AppUtils.java" : {
+          "createAppDto" : {
+            "definition" : "public static AppDTO createAppDto(String name, String version, String author) {\n    return AppDTO.builder().name(name).version(version).author(author).build();\n}"
+          }
+        }
+      }
+    } ],
+    "fields" : [ {
+      "name" : "modelMapper",
+      "accessModifier" : "private final",
+      "value" : null,
+      "type" : "ModelMapper",
+      "description" : null
+    } ],
+    "constructors" : [ ],
+    "extends" : null,
+    "childEntity" : null,
+    "accessSpecifier" : "PUBLIC"
+  } ],
+  "samePackageClasses" : [ ]
+}, {
+  "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/application/CRUDRestApplication.java",
+  "packageName" : "br.com.example.davidarchanjo.application",
+  "imports" : [ {
+    "dereferencedParts" : [ {
+      "name" : "AppService",
+      "description" : null,
+      "annotations" : [ ],
+      "methods" : [ {
+        "name" : "populate",
+        "body" : "{\n}",
+        "arguments" : [ ],
+        "accessModifier" : "",
+        "methodsCalled" : [ ],
+        "usedEntities" : [ ],
+        "annotations" : [ ],
+        "returnType" : "void",
+        "description" : null,
+        "methodDefinition" : "void populate();"
+      } ],
+      "fields" : [ ],
+      "constructors" : [ ],
+      "extends" : null,
+      "childEntity" : null,
+      "accessSpecifier" : "PUBLIC",
+      "imports" : [ {
+        "dereferencedParts" : [ ],
+        "name" : "java.util.List"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "java.util.Optional"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "br.com.example.davidarchanjo.model.dto.AppDTO"
+      } ]
+    } ],
+    "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/service/AppService.java",
+    "name" : "br.com.example.davidarchanjo.service.AppService"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.beans.factory.annotation.Autowired"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.boot.CommandLineRunner"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.boot.SpringApplication"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.boot.autoconfigure.SpringBootApplication"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.boot.autoconfigure.domain.EntityScan"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.data.jpa.repository.config.EnableJpaRepositories"
+  } ],
+  "entities" : [ {
+    "name" : "CRUDRestApplication",
+    "description" : null,
+    "annotations" : [ "EntityScan", "EnableJpaRepositories", "SpringBootApplication" ],
+    "methods" : [ {
+      "name" : "main",
+      "body" : "{\n    SpringApplication.run(CRUDRestApplication.class, args);\n}",
+      "arguments" : [ "String[] args" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "run",
+        "arguments" : [ "CRUDRestApplication.class", "args" ]
+      } ],
+      "usedEntities" : [ "SpringApplication", "args" ],
+      "annotations" : [ ],
+      "returnType" : "void",
+      "description" : null,
+      "methodDefinition" : "public static void main(String[] args) {\n    SpringApplication.run(CRUDRestApplication.class, args);\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/application/CRUDRestApplication.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    }, {
+      "name" : "run",
+      "body" : "{\n    service.populate();\n}",
+      "arguments" : [ "String... args" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "populate",
+        "arguments" : [ ]
+      } ],
+      "usedEntities" : [ "service" ],
+      "annotations" : [ "Override" ],
+      "returnType" : "void",
+      "description" : "The database is being populated from here because Spring Boot will\nautomatically call the run method of all beans implementing\nCommandLineRunner interface after the application context has been loaded.",
+      "methodDefinition" : "/**\n * The database is being populated from here because Spring Boot will\n * automatically call the run method of all beans implementing\n * CommandLineRunner interface after the application context has been loaded.\n */\n@Override\npublic void run(String... args) {\n    service.populate();\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/application/CRUDRestApplication.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    } ],
+    "fields" : [ {
+      "name" : "service",
+      "accessModifier" : "private",
+      "value" : null,
+      "type" : "AppService",
+      "description" : null
+    } ],
+    "constructors" : [ ],
+    "extends" : null,
+    "childEntity" : null,
+    "accessSpecifier" : "PUBLIC"
+  } ],
+  "samePackageClasses" : [ ]
+}, {
+  "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/service/AppService.java",
+  "packageName" : "br.com.example.davidarchanjo.service",
+  "imports" : [ {
+    "dereferencedParts" : [ ],
+    "name" : "java.util.List"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "java.util.Optional"
+  }, {
+    "dereferencedParts" : [ {
+      "name" : "AppDTO",
+      "description" : null,
+      "annotations" : [ "Data", "NoArgsConstructor" ],
+      "methods" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      }, {
+        "name" : "version",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      }, {
+        "name" : "author",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      } ],
+      "constructors" : [ {
+        "name" : "AppDTO",
+        "body" : "{\n    this.name = name;\n    this.version = version;\n    this.author = author;\n}",
+        "arguments" : [ "String name", "String version", "String author" ],
+        "accessModifier" : "public",
+        "methodsCalled" : [ ],
+        "usedEntities" : [ "name", "version", "author" ],
+        "annotations" : [ "Builder" ],
+        "description" : null,
+        "methodDefinition" : "@Builder\npublic AppDTO(String name, String version, String author) {\n    this.name = name;\n    this.version = version;\n    this.author = author;\n}"
+      } ],
+      "extends" : null,
+      "childEntity" : null,
+      "accessSpecifier" : "PUBLIC",
+      "imports" : [ {
+        "dereferencedParts" : [ ],
+        "name" : "com.fasterxml.jackson.annotation.JsonProperty"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "lombok"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "javax.validation.constraints.NotEmpty"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "javax.validation.constraints.Size"
+      } ]
+    } ],
+    "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/dto/AppDTO.java",
+    "name" : "br.com.example.davidarchanjo.model.dto.AppDTO"
+  } ],
+  "entities" : [ {
+    "name" : "AppService",
+    "description" : null,
+    "annotations" : [ ],
+    "methods" : [ {
+      "name" : "createNewApp",
+      "body" : "{\n}",
+      "arguments" : [ "AppDTO dto" ],
+      "accessModifier" : "",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ ],
+      "annotations" : [ ],
+      "returnType" : "Long",
+      "description" : null,
+      "methodDefinition" : "Long createNewApp(AppDTO dto);",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/service/AppService.java",
+      "test_exists" : true,
+      "test_functions" : {
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/controller/AppControllerTest.java" : {
+          "shouldCreateNewAppSuccessfully" : {
+            "definition" : "@Test\n@Order(1)\n@DisplayName(\"Should Create New App Successfully\")\npublic void shouldCreateNewAppSuccessfully() throws Exception {\n    Optional<AppDTO> dto = Optional.of(createAppDto(\"awesome-app\", \"1.0.0\", \"Java Duke\"));\n    when(service.createNewApp(argumentCaptor.capture())).thenReturn(1L);\n    mockMvc.perform(post(urlTemplate).contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(dto))).andExpect(status().isCreated()).andExpect(header().exists(\"Location\")).andExpect(header().string(\"Location\", \"http://localhost/api/v1/apps/1\"));\n    assertThat(argumentCaptor.getValue().getName(), is(\"awesome-app\"));\n    assertThat(argumentCaptor.getValue().getAuthor(), is(\"Java Duke\"));\n    assertThat(argumentCaptor.getValue().getVersion(), is(\"1.0.0\"));\n}"
+          }
+        }
+      }
+    }, {
+      "name" : "getAllApps",
+      "body" : "{\n}",
+      "arguments" : [ ],
+      "accessModifier" : "",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ ],
+      "annotations" : [ ],
+      "returnType" : "List<Optional<AppDTO>>",
+      "description" : null,
+      "methodDefinition" : "List<Optional<AppDTO>> getAllApps();",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/service/AppService.java",
+      "test_exists" : true,
+      "test_functions" : {
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/controller/AppControllerTest.java" : {
+          "shouldGetAllAppsAndWithArrayOfTwoItemsSuccessfully" : {
+            "definition" : "@Test\n@Order(2)\n@DisplayName(\"Should Get All Apps With Array Of Two Items Successfully\")\npublic void shouldGetAllAppsAndWithArrayOfTwoItemsSuccessfully() throws Exception {\n    List<Optional<AppDTO>> stub = Arrays.asList(createAppDto(\"github\", \"1.3.7\", \"Java Duke\"), createAppDto(\"linkedin\", \"1.8\", \"Java Duke\")).stream().map(Optional::of).collect(Collectors.toList());\n    when(service.getAllApps()).thenReturn(stub);\n    mockMvc.perform(get(urlTemplate)).andExpect(status().isOk()).andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE)).andExpect(jsonPath(\"$\", hasSize(2))).andExpect(jsonPath(\"$[0].appName\", is(\"github\"))).andExpect(jsonPath(\"$[0].devName\", is(\"Java Duke\"))).andExpect(jsonPath(\"$[1].appName\", is(\"linkedin\"))).andExpect(jsonPath(\"$[1].appVersion\", is(\"1.8\")));\n}"
+          }
+        }
+      }
+    }, {
+      "name" : "getAppById",
+      "body" : "{\n}",
+      "arguments" : [ "Long id" ],
+      "accessModifier" : "",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ ],
+      "annotations" : [ ],
+      "returnType" : "Optional<AppDTO>",
+      "description" : null,
+      "methodDefinition" : "Optional<AppDTO> getAppById(Long id);",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/service/AppService.java",
+      "test_exists" : true,
+      "test_functions" : {
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/controller/AppControllerTest.java" : {
+          "shouldGetAppByIdOneSuccessfully" : {
+            "definition" : "@Test\n@Order(3)\n@DisplayName(\"Should Get App By Id Successfully\")\npublic void shouldGetAppByIdOneSuccessfully() throws Exception {\n    Optional<AppDTO> stub = Optional.of(createAppDto(\"facebook\", \"1.0.0-SNAPSHOT\", \"Java Duke\"));\n    when(service.getAppById(1L)).thenReturn(stub);\n    mockMvc.perform(get(urlTemplate + \"/1\")).andDo(print()).andExpect(status().isOk()).andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE)).andExpect(jsonPath(\"$.appName\", is(\"facebook\"))).andExpect(jsonPath(\"$.appVersion\", is(\"1.0.0-SNAPSHOT\"))).andExpect(jsonPath(\"$.devName\", is(\"Java Duke\")));\n}"
+          },
+          "shouldGetAppNotFoundExceptionWithErrorNotFoundHttpStatus" : {
+            "definition" : "@Test\n@Order(4)\n@DisplayName(\"Should Get AppNotFoundException With Error Not Found Http Status\")\npublic void shouldGetAppNotFoundExceptionWithErrorNotFoundHttpStatus() throws Exception {\n    when(service.getAppById(1L)).thenThrow(new AppNotFoundException(\"No such App for id '1'\"));\n    mockMvc.perform(get(urlTemplate + \"/1\")).andDo(print()).andExpect(status().isNotFound());\n}"
+          }
+        }
+      }
+    }, {
+      "name" : "updateApp",
+      "body" : "{\n}",
+      "arguments" : [ "Long id", "AppDTO dto" ],
+      "accessModifier" : "",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ ],
+      "annotations" : [ ],
+      "returnType" : "Optional<AppDTO>",
+      "description" : null,
+      "methodDefinition" : "Optional<AppDTO> updateApp(Long id, AppDTO dto);",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/service/AppService.java",
+      "test_exists" : true,
+      "test_functions" : {
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/controller/AppControllerTest.java" : {
+          "shouldUpdateAppWithKnownIdSuccessfully" : {
+            "definition" : "@Test\n@Order(5)\n@DisplayName(\"Should Update App With Known IdSuccessfully\")\npublic void shouldUpdateAppWithKnownIdSuccessfully() throws Exception {\n    Optional<AppDTO> stub = Optional.of(createAppDto(\"twitter\", \"0.1.0\", \"Java Duke\"));\n    AppDTO dto = createAppDto(\"twitter\", \"0.1.0\", \"Java Duke\");\n    when(service.updateApp(eq(1L), argumentCaptor.capture())).thenReturn(stub);\n    mockMvc.perform(put(urlTemplate + \"/1\").contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(dto))).andDo(print()).andExpect(status().isNoContent());\n    assertThat(argumentCaptor.getValue().getName(), is(\"twitter\"));\n    assertThat(argumentCaptor.getValue().getAuthor(), is(\"Java Duke\"));\n    assertThat(argumentCaptor.getValue().getVersion(), is(\"0.1.0\"));\n}"
+          },
+          "shouldTryUpdateAppWithUnknownIdWithErrorNotFoundHttpStatus" : {
+            "definition" : "@Test\n@Order(6)\n@DisplayName(\"Should Try Update App With Unknown Id With Error NotFound Http Status\")\npublic void shouldTryUpdateAppWithUnknownIdWithErrorNotFoundHttpStatus() throws Exception {\n    AppDTO dto = createAppDto(\"pinterest\", \"2.0.1-RELEASE\", \"Java Duke\");\n    when(service.updateApp(eq(42L), argumentCaptor.capture())).thenThrow(new AppNotFoundException(\"No such App for id '42'\"));\n    mockMvc.perform(put(urlTemplate + \"/42\").contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(dto))).andDo(print()).andExpect(status().isNotFound());\n}"
+          }
+        }
+      }
+    }, {
+      "name" : "deleteAppById",
+      "body" : "{\n}",
+      "arguments" : [ "Long id" ],
+      "accessModifier" : "",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ ],
+      "annotations" : [ ],
+      "returnType" : "void",
+      "description" : null,
+      "methodDefinition" : "void deleteAppById(Long id);",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/service/AppService.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    }, {
+      "name" : "populate",
+      "body" : "{\n}",
+      "arguments" : [ ],
+      "accessModifier" : "",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ ],
+      "annotations" : [ ],
+      "returnType" : "void",
+      "description" : null,
+      "methodDefinition" : "void populate();",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/service/AppService.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    } ],
+    "fields" : [ ],
+    "constructors" : [ ],
+    "extends" : null,
+    "childEntity" : null,
+    "accessSpecifier" : "PUBLIC"
+  } ],
+  "samePackageClasses" : [ ]
+}, {
+  "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/service/impl/AppServiceImpl.java",
+  "packageName" : "br.com.example.davidarchanjo.service.impl",
+  "imports" : [ {
+    "dereferencedParts" : [ {
+      "name" : "AppBuilder",
+      "description" : null,
+      "annotations" : [ "Component", "AllArgsConstructor" ],
+      "methods" : [ {
+        "name" : "build",
+        "body" : "{\n    App model = modelMapper.map(dto, App.class);\n    return model;\n}",
+        "arguments" : [ "AppDTO dto" ],
+        "accessModifier" : "public",
+        "methodsCalled" : [ {
+          "name" : "map",
+          "arguments" : [ "dto", "App.class" ]
+        } ],
+        "usedEntities" : [ "modelMapper", "dto", "model" ],
+        "annotations" : [ ],
+        "returnType" : "App",
+        "description" : null,
+        "methodDefinition" : "public App build(AppDTO dto) {\n    App model = modelMapper.map(dto, App.class);\n    return model;\n}"
+      }, {
+        "name" : "build",
+        "body" : "{\n    AppDTO dto = modelMapper.map(domain, AppDTO.class);\n    return Optional.of(dto);\n}",
+        "arguments" : [ "App domain" ],
+        "accessModifier" : "public",
+        "methodsCalled" : [ {
+          "name" : "map",
+          "arguments" : [ "domain", "AppDTO.class" ]
+        }, {
+          "name" : "of",
+          "arguments" : [ "dto" ]
+        } ],
+        "usedEntities" : [ "modelMapper", "domain", "Optional", "dto" ],
+        "annotations" : [ ],
+        "returnType" : "Optional<AppDTO>",
+        "description" : null,
+        "methodDefinition" : "public Optional<AppDTO> build(App domain) {\n    AppDTO dto = modelMapper.map(domain, AppDTO.class);\n    return Optional.of(dto);\n}"
+      }, {
+        "name" : "build",
+        "body" : "{\n    modelMapper.map(dto, domain);\n    return domain;\n}",
+        "arguments" : [ "AppDTO dto", "App domain" ],
+        "accessModifier" : "public",
+        "methodsCalled" : [ {
+          "name" : "map",
+          "arguments" : [ "dto", "domain" ]
+        } ],
+        "usedEntities" : [ "modelMapper", "dto", "domain" ],
+        "annotations" : [ ],
+        "returnType" : "App",
+        "description" : null,
+        "methodDefinition" : "public App build(AppDTO dto, App domain) {\n    modelMapper.map(dto, domain);\n    return domain;\n}"
+      } ],
+      "fields" : [ {
+        "name" : "modelMapper",
+        "accessModifier" : "private final",
+        "value" : null,
+        "type" : "ModelMapper",
+        "description" : null
+      } ],
+      "constructors" : [ ],
+      "extends" : null,
+      "childEntity" : null,
+      "accessSpecifier" : "PUBLIC",
+      "imports" : [ {
+        "dereferencedParts" : [ ],
+        "name" : "java.util.Optional"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "br.com.example.davidarchanjo.model.domain.App"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "br.com.example.davidarchanjo.model.dto.AppDTO"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "org.modelmapper.ModelMapper"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "org.springframework.stereotype.Component"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "lombok.AllArgsConstructor"
+      } ]
+    } ],
+    "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/builder/AppBuilder.java",
+    "name" : "br.com.example.davidarchanjo.builder.AppBuilder"
+  }, {
+    "dereferencedParts" : [ {
+      "name" : "AppNotFoundException",
+      "description" : null,
+      "annotations" : [ "ResponseStatus" ],
+      "methods" : [ ],
+      "fields" : [ ],
+      "constructors" : [ {
+        "name" : "AppNotFoundException",
+        "body" : "{\n    super(message);\n}",
+        "arguments" : [ "String message" ],
+        "accessModifier" : "public",
+        "methodsCalled" : [ ],
+        "usedEntities" : [ "message" ],
+        "annotations" : [ ],
+        "description" : null,
+        "methodDefinition" : "public AppNotFoundException(String message) {\n    super(message);\n}"
+      } ],
+      "extends" : null,
+      "childEntity" : null,
+      "accessSpecifier" : "PUBLIC",
+      "imports" : [ {
+        "dereferencedParts" : [ ],
+        "name" : "org.springframework.http.HttpStatus"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "org.springframework.web.bind.annotation.ResponseStatus"
+      } ]
+    } ],
+    "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/exception/AppNotFoundException.java",
+    "name" : "br.com.example.davidarchanjo.exception.AppNotFoundException"
+  }, {
+    "dereferencedParts" : [ {
+      "name" : "App",
+      "description" : null,
+      "annotations" : [ "Data", "Entity", "NoArgsConstructor", "Table" ],
+      "methods" : [ ],
+      "fields" : [ {
+        "name" : "id",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "Long",
+        "description" : null
+      }, {
+        "name" : "author",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      }, {
+        "name" : "name",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      }, {
+        "name" : "version",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      } ],
+      "constructors" : [ {
+        "name" : "App",
+        "body" : "{\n    this.id = id;\n    this.author = author;\n    this.name = name;\n    this.version = version;\n}",
+        "arguments" : [ "Long id", "String author", "String name", "String version" ],
+        "accessModifier" : "public",
+        "methodsCalled" : [ ],
+        "usedEntities" : [ "id", "author", "name", "version" ],
+        "annotations" : [ "Builder" ],
+        "description" : null,
+        "methodDefinition" : "@Builder\npublic App(Long id, String author, String name, String version) {\n    this.id = id;\n    this.author = author;\n    this.name = name;\n    this.version = version;\n}"
+      } ],
+      "extends" : null,
+      "childEntity" : null,
+      "accessSpecifier" : "PUBLIC",
+      "imports" : [ {
+        "dereferencedParts" : [ ],
+        "name" : "javax.persistence.Entity"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "javax.persistence.GeneratedValue"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "javax.persistence.Id"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "javax.persistence.Table"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "lombok.Builder"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "lombok.Data"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "lombok.NoArgsConstructor"
+      } ]
+    } ],
+    "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/domain/App.java",
+    "name" : "br.com.example.davidarchanjo.model.domain.App"
+  }, {
+    "dereferencedParts" : [ {
+      "name" : "AppDTO",
+      "description" : null,
+      "annotations" : [ "Data", "NoArgsConstructor" ],
+      "methods" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      }, {
+        "name" : "version",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      }, {
+        "name" : "author",
+        "accessModifier" : "private",
+        "value" : null,
+        "type" : "String",
+        "description" : null
+      } ],
+      "constructors" : [ {
+        "name" : "AppDTO",
+        "body" : "{\n    this.name = name;\n    this.version = version;\n    this.author = author;\n}",
+        "arguments" : [ "String name", "String version", "String author" ],
+        "accessModifier" : "public",
+        "methodsCalled" : [ ],
+        "usedEntities" : [ "name", "version", "author" ],
+        "annotations" : [ "Builder" ],
+        "description" : null,
+        "methodDefinition" : "@Builder\npublic AppDTO(String name, String version, String author) {\n    this.name = name;\n    this.version = version;\n    this.author = author;\n}"
+      } ],
+      "extends" : null,
+      "childEntity" : null,
+      "accessSpecifier" : "PUBLIC",
+      "imports" : [ {
+        "dereferencedParts" : [ ],
+        "name" : "com.fasterxml.jackson.annotation.JsonProperty"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "lombok"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "javax.validation.constraints.NotEmpty"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "javax.validation.constraints.Size"
+      } ]
+    } ],
+    "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/model/dto/AppDTO.java",
+    "name" : "br.com.example.davidarchanjo.model.dto.AppDTO"
+  }, {
+    "dereferencedParts" : [ {
+      "name" : "AppRepository",
+      "description" : null,
+      "annotations" : [ "Repository" ],
+      "methods" : [ ],
+      "fields" : [ ],
+      "constructors" : [ ],
+      "extends" : null,
+      "childEntity" : null,
+      "accessSpecifier" : "PUBLIC",
+      "imports" : [ {
+        "dereferencedParts" : [ ],
+        "name" : "br.com.example.davidarchanjo.model.domain.App"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "org.springframework.data.jpa.repository.JpaRepository"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "org.springframework.stereotype.Repository"
+      } ]
+    } ],
+    "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/repository/AppRepository.java",
+    "name" : "br.com.example.davidarchanjo.repository.AppRepository"
+  }, {
+    "dereferencedParts" : [ {
+      "name" : "AppService",
+      "description" : null,
+      "annotations" : [ ],
+      "methods" : [ ],
+      "fields" : [ ],
+      "constructors" : [ ],
+      "extends" : null,
+      "childEntity" : null,
+      "accessSpecifier" : "PUBLIC",
+      "imports" : [ {
+        "dereferencedParts" : [ ],
+        "name" : "java.util.List"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "java.util.Optional"
+      }, {
+        "dereferencedParts" : [ ],
+        "name" : "br.com.example.davidarchanjo.model.dto.AppDTO"
+      } ]
+    } ],
+    "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/service/AppService.java",
+    "name" : "br.com.example.davidarchanjo.service.AppService"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "com.github.javafaker.Faker"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "lombok.AllArgsConstructor"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "lombok.val"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.stereotype.Service"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.transaction.annotation.Transactional"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "java.util.List"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "java.util.Optional"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "java.util.stream.Collectors"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "java.util.stream.IntStream"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "java.util.stream.Stream"
+  } ],
+  "entities" : [ {
+    "name" : "AppServiceImpl",
+    "description" : null,
+    "annotations" : [ "Service", "AllArgsConstructor" ],
+    "methods" : [ {
+      "name" : "createNewApp",
+      "body" : "{\n    return Stream.of(dto).map(builder::build).map(repository::save).map(App::getId).findFirst().get();\n}",
+      "arguments" : [ "AppDTO dto" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "get",
+        "arguments" : [ ]
+      }, {
+        "name" : "findFirst",
+        "arguments" : [ ]
+      }, {
+        "name" : "map",
+        "arguments" : [ "App::getId" ]
+      }, {
+        "name" : "map",
+        "arguments" : [ "repository::save" ]
+      }, {
+        "name" : "map",
+        "arguments" : [ "builder::build" ]
+      }, {
+        "name" : "of",
+        "arguments" : [ "dto" ]
+      } ],
+      "usedEntities" : [ "Stream", "dto" ],
+      "annotations" : [ "Override" ],
+      "returnType" : "Long",
+      "description" : null,
+      "methodDefinition" : "@Override\npublic Long createNewApp(AppDTO dto) {\n    return Stream.of(dto).map(builder::build).map(repository::save).map(App::getId).findFirst().get();\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/service/impl/AppServiceImpl.java",
+      "test_exists" : true,
+      "test_functions" : {
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/controller/AppControllerTest.java" : {
+          "shouldCreateNewAppSuccessfully" : {
+            "definition" : "@Test\n@Order(1)\n@DisplayName(\"Should Create New App Successfully\")\npublic void shouldCreateNewAppSuccessfully() throws Exception {\n    Optional<AppDTO> dto = Optional.of(createAppDto(\"awesome-app\", \"1.0.0\", \"Java Duke\"));\n    when(service.createNewApp(argumentCaptor.capture())).thenReturn(1L);\n    mockMvc.perform(post(urlTemplate).contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(dto))).andExpect(status().isCreated()).andExpect(header().exists(\"Location\")).andExpect(header().string(\"Location\", \"http://localhost/api/v1/apps/1\"));\n    assertThat(argumentCaptor.getValue().getName(), is(\"awesome-app\"));\n    assertThat(argumentCaptor.getValue().getAuthor(), is(\"Java Duke\"));\n    assertThat(argumentCaptor.getValue().getVersion(), is(\"1.0.0\"));\n}"
+          }
+        }
+      }
+    }, {
+      "name" : "getAllApps",
+      "body" : "{\n    return repository.findAll().stream().map(builder::build).collect(Collectors.toList());\n}",
+      "arguments" : [ ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "collect",
+        "arguments" : [ "Collectors.toList()" ]
+      }, {
+        "name" : "map",
+        "arguments" : [ "builder::build" ]
+      }, {
+        "name" : "stream",
+        "arguments" : [ ]
+      }, {
+        "name" : "findAll",
+        "arguments" : [ ]
+      }, {
+        "name" : "toList",
+        "arguments" : [ ]
+      } ],
+      "usedEntities" : [ "repository", "Collectors" ],
+      "annotations" : [ "Override" ],
+      "returnType" : "List<Optional<AppDTO>>",
+      "description" : null,
+      "methodDefinition" : "@Override\npublic List<Optional<AppDTO>> getAllApps() {\n    return repository.findAll().stream().map(builder::build).collect(Collectors.toList());\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/service/impl/AppServiceImpl.java",
+      "test_exists" : true,
+      "test_functions" : {
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/controller/AppControllerTest.java" : {
+          "shouldGetAllAppsAndWithArrayOfTwoItemsSuccessfully" : {
+            "definition" : "@Test\n@Order(2)\n@DisplayName(\"Should Get All Apps With Array Of Two Items Successfully\")\npublic void shouldGetAllAppsAndWithArrayOfTwoItemsSuccessfully() throws Exception {\n    List<Optional<AppDTO>> stub = Arrays.asList(createAppDto(\"github\", \"1.3.7\", \"Java Duke\"), createAppDto(\"linkedin\", \"1.8\", \"Java Duke\")).stream().map(Optional::of).collect(Collectors.toList());\n    when(service.getAllApps()).thenReturn(stub);\n    mockMvc.perform(get(urlTemplate)).andExpect(status().isOk()).andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE)).andExpect(jsonPath(\"$\", hasSize(2))).andExpect(jsonPath(\"$[0].appName\", is(\"github\"))).andExpect(jsonPath(\"$[0].devName\", is(\"Java Duke\"))).andExpect(jsonPath(\"$[1].appName\", is(\"linkedin\"))).andExpect(jsonPath(\"$[1].appVersion\", is(\"1.8\")));\n}"
+          }
+        }
+      }
+    }, {
+      "name" : "getAppById",
+      "body" : "{\n    return repository.findById(id).map(builder::build).orElseThrow(() -> new AppNotFoundException(String.format(\"No such App for id '%s'\", id)));\n}",
+      "arguments" : [ "Long id" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "orElseThrow",
+        "arguments" : [ "() -> new AppNotFoundException(String.format(\"No such App for id '%s'\", id))" ]
+      }, {
+        "name" : "map",
+        "arguments" : [ "builder::build" ]
+      }, {
+        "name" : "findById",
+        "arguments" : [ "id" ]
+      }, {
+        "name" : "format",
+        "arguments" : [ "\"No such App for id '%s'\"", "id" ]
+      } ],
+      "usedEntities" : [ "repository", "id", "String" ],
+      "annotations" : [ "Override" ],
+      "returnType" : "Optional<AppDTO>",
+      "description" : null,
+      "methodDefinition" : "@Override\npublic Optional<AppDTO> getAppById(Long id) {\n    return repository.findById(id).map(builder::build).orElseThrow(() -> new AppNotFoundException(String.format(\"No such App for id '%s'\", id)));\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/service/impl/AppServiceImpl.java",
+      "test_exists" : true,
+      "test_functions" : {
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/controller/AppControllerTest.java" : {
+          "shouldGetAppByIdOneSuccessfully" : {
+            "definition" : "@Test\n@Order(3)\n@DisplayName(\"Should Get App By Id Successfully\")\npublic void shouldGetAppByIdOneSuccessfully() throws Exception {\n    Optional<AppDTO> stub = Optional.of(createAppDto(\"facebook\", \"1.0.0-SNAPSHOT\", \"Java Duke\"));\n    when(service.getAppById(1L)).thenReturn(stub);\n    mockMvc.perform(get(urlTemplate + \"/1\")).andDo(print()).andExpect(status().isOk()).andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE)).andExpect(jsonPath(\"$.appName\", is(\"facebook\"))).andExpect(jsonPath(\"$.appVersion\", is(\"1.0.0-SNAPSHOT\"))).andExpect(jsonPath(\"$.devName\", is(\"Java Duke\")));\n}"
+          },
+          "shouldGetAppNotFoundExceptionWithErrorNotFoundHttpStatus" : {
+            "definition" : "@Test\n@Order(4)\n@DisplayName(\"Should Get AppNotFoundException With Error Not Found Http Status\")\npublic void shouldGetAppNotFoundExceptionWithErrorNotFoundHttpStatus() throws Exception {\n    when(service.getAppById(1L)).thenThrow(new AppNotFoundException(\"No such App for id '1'\"));\n    mockMvc.perform(get(urlTemplate + \"/1\")).andDo(print()).andExpect(status().isNotFound());\n}"
+          }
+        }
+      }
+    }, {
+      "name" : "updateApp",
+      "body" : "{\n    return repository.findById(id).map(model -> builder.build(dto, model)).map(repository::save).map(builder::build).orElseThrow(() -> new AppNotFoundException(String.format(\"No such App for id '%s'\", id)));\n}",
+      "arguments" : [ "Long id", "AppDTO dto" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "orElseThrow",
+        "arguments" : [ "() -> new AppNotFoundException(String.format(\"No such App for id '%s'\", id))" ]
+      }, {
+        "name" : "map",
+        "arguments" : [ "builder::build" ]
+      }, {
+        "name" : "map",
+        "arguments" : [ "repository::save" ]
+      }, {
+        "name" : "map",
+        "arguments" : [ "model -> builder.build(dto, model)" ]
+      }, {
+        "name" : "findById",
+        "arguments" : [ "id" ]
+      }, {
+        "name" : "build",
+        "arguments" : [ "dto", "model" ]
+      }, {
+        "name" : "format",
+        "arguments" : [ "\"No such App for id '%s'\"", "id" ]
+      } ],
+      "usedEntities" : [ "repository", "id", "builder", "dto", "model", "String" ],
+      "annotations" : [ "Transactional", "Override" ],
+      "returnType" : "Optional<AppDTO>",
+      "description" : null,
+      "methodDefinition" : "@Transactional\n@Override\npublic Optional<AppDTO> updateApp(Long id, AppDTO dto) {\n    return repository.findById(id).map(model -> builder.build(dto, model)).map(repository::save).map(builder::build).orElseThrow(() -> new AppNotFoundException(String.format(\"No such App for id '%s'\", id)));\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/service/impl/AppServiceImpl.java",
+      "test_exists" : true,
+      "test_functions" : {
+        "/home/info/spring-boot-crud-rest/src/test/java/br/com/example/davidarchanjo/controller/AppControllerTest.java" : {
+          "shouldUpdateAppWithKnownIdSuccessfully" : {
+            "definition" : "@Test\n@Order(5)\n@DisplayName(\"Should Update App With Known IdSuccessfully\")\npublic void shouldUpdateAppWithKnownIdSuccessfully() throws Exception {\n    Optional<AppDTO> stub = Optional.of(createAppDto(\"twitter\", \"0.1.0\", \"Java Duke\"));\n    AppDTO dto = createAppDto(\"twitter\", \"0.1.0\", \"Java Duke\");\n    when(service.updateApp(eq(1L), argumentCaptor.capture())).thenReturn(stub);\n    mockMvc.perform(put(urlTemplate + \"/1\").contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(dto))).andDo(print()).andExpect(status().isNoContent());\n    assertThat(argumentCaptor.getValue().getName(), is(\"twitter\"));\n    assertThat(argumentCaptor.getValue().getAuthor(), is(\"Java Duke\"));\n    assertThat(argumentCaptor.getValue().getVersion(), is(\"0.1.0\"));\n}"
+          },
+          "shouldTryUpdateAppWithUnknownIdWithErrorNotFoundHttpStatus" : {
+            "definition" : "@Test\n@Order(6)\n@DisplayName(\"Should Try Update App With Unknown Id With Error NotFound Http Status\")\npublic void shouldTryUpdateAppWithUnknownIdWithErrorNotFoundHttpStatus() throws Exception {\n    AppDTO dto = createAppDto(\"pinterest\", \"2.0.1-RELEASE\", \"Java Duke\");\n    when(service.updateApp(eq(42L), argumentCaptor.capture())).thenThrow(new AppNotFoundException(\"No such App for id '42'\"));\n    mockMvc.perform(put(urlTemplate + \"/42\").contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(dto))).andDo(print()).andExpect(status().isNotFound());\n}"
+          }
+        }
+      }
+    }, {
+      "name" : "deleteAppById",
+      "body" : "{\n    repository.deleteById(id);\n}",
+      "arguments" : [ "Long id" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "deleteById",
+        "arguments" : [ "id" ]
+      } ],
+      "usedEntities" : [ "repository", "id" ],
+      "annotations" : [ "Override" ],
+      "returnType" : "void",
+      "description" : null,
+      "methodDefinition" : "@Override\npublic void deleteAppById(Long id) {\n    repository.deleteById(id);\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/service/impl/AppServiceImpl.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    }, {
+      "name" : "populate",
+      "body" : "{\n    val faker = new Faker();\n    IntStream.range(0, 100).forEach(i -> {\n        App app = App.builder().author(faker.app().author()).name(faker.app().name()).version(faker.app().version()).build();\n        repository.save(app);\n    });\n}",
+      "arguments" : [ ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "forEach",
+        "arguments" : [ "i -> {\n    App app = App.builder().author(faker.app().author()).name(faker.app().name()).version(faker.app().version()).build();\n    repository.save(app);\n}" ]
+      }, {
+        "name" : "range",
+        "arguments" : [ "0", "100" ]
+      }, {
+        "name" : "build",
+        "arguments" : [ ]
+      }, {
+        "name" : "version",
+        "arguments" : [ "faker.app().version()" ]
+      }, {
+        "name" : "name",
+        "arguments" : [ "faker.app().name()" ]
+      }, {
+        "name" : "author",
+        "arguments" : [ "faker.app().author()" ]
+      }, {
+        "name" : "builder",
+        "arguments" : [ ]
+      }, {
+        "name" : "author",
+        "arguments" : [ ]
+      }, {
+        "name" : "app",
+        "arguments" : [ ]
+      }, {
+        "name" : "name",
+        "arguments" : [ ]
+      }, {
+        "name" : "app",
+        "arguments" : [ ]
+      }, {
+        "name" : "version",
+        "arguments" : [ ]
+      }, {
+        "name" : "app",
+        "arguments" : [ ]
+      }, {
+        "name" : "save",
+        "arguments" : [ "app" ]
+      } ],
+      "usedEntities" : [ "IntStream", "App", "faker", "repository", "app" ],
+      "annotations" : [ "Override" ],
+      "returnType" : "void",
+      "description" : null,
+      "methodDefinition" : "@Override\npublic void populate() {\n    val faker = new Faker();\n    IntStream.range(0, 100).forEach(i -> {\n        App app = App.builder().author(faker.app().author()).name(faker.app().name()).version(faker.app().version()).build();\n        repository.save(app);\n    });\n}",
+      "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/service/impl/AppServiceImpl.java",
+      "test_exists" : false,
+      "test_functions" : { }
+    } ],
+    "fields" : [ {
+      "name" : "repository",
+      "accessModifier" : "private final",
+      "value" : null,
+      "type" : "AppRepository",
+      "description" : null
+    }, {
+      "name" : "builder",
+      "accessModifier" : "private final",
+      "value" : null,
+      "type" : "AppBuilder",
+      "description" : null
+    } ],
+    "constructors" : [ ],
+    "extends" : null,
+    "childEntity" : null,
+    "accessSpecifier" : "PUBLIC"
+  } ],
+  "samePackageClasses" : [ ]
+}, {
+  "filePath" : "/home/info/spring-boot-crud-rest/src/main/java/br/com/example/davidarchanjo/exception/AppNotFoundException.java",
+  "packageName" : "br.com.example.davidarchanjo.exception",
+  "imports" : [ {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.http.HttpStatus"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.web.bind.annotation.ResponseStatus"
+  } ],
+  "entities" : [ {
+    "name" : "AppNotFoundException",
+    "description" : null,
+    "annotations" : [ "ResponseStatus" ],
+    "methods" : [ ],
+    "fields" : [ ],
+    "constructors" : [ {
+      "name" : "AppNotFoundException",
+      "body" : "{\n    super(message);\n}",
+      "arguments" : [ "String message" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ ],
+      "usedEntities" : [ "message" ],
+      "annotations" : [ ],
+      "description" : null,
+      "methodDefinition" : "public AppNotFoundException(String message) {\n    super(message);\n}"
+    } ],
+    "extends" : null,
+    "childEntity" : null,
+    "accessSpecifier" : "PUBLIC"
+  } ],
+  "samePackageClasses" : [ ]
+} ]

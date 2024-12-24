@@ -325,34 +325,31 @@
     "description" : null,
     "annotations" : [ "Service", "AllArgsConstructor" ],
     "methods" : [ {
-      "name" : "createNewApp",
-      "body" : "{\n    return Stream.of(dto).map(builder::build).map(repository::save).map(App::getId).findFirst().get();\n}",
-      "arguments" : [ "AppDTO dto" ],
+      "name" : "getAllApps",
+      "body" : "{\n    return repository.findAll().stream().map(builder::build).collect(Collectors.toList());\n}",
+      "arguments" : [ ],
       "accessModifier" : "public",
       "methodsCalled" : [ {
-        "name" : "get",
-        "arguments" : [ ]
-      }, {
-        "name" : "findFirst",
-        "arguments" : [ ]
-      }, {
-        "name" : "map",
-        "arguments" : [ "App::getId" ]
-      }, {
-        "name" : "map",
-        "arguments" : [ "repository::save" ]
+        "name" : "collect",
+        "arguments" : [ "Collectors.toList()" ]
       }, {
         "name" : "map",
         "arguments" : [ "builder::build" ]
       }, {
-        "name" : "of",
-        "arguments" : [ "dto" ]
+        "name" : "stream",
+        "arguments" : [ ]
+      }, {
+        "name" : "findAll",
+        "arguments" : [ ]
+      }, {
+        "name" : "toList",
+        "arguments" : [ ]
       } ],
-      "usedEntities" : [ "Stream", "dto" ],
+      "usedEntities" : [ "repository", "Collectors" ],
       "annotations" : [ "Override" ],
-      "returnType" : "Long",
+      "returnType" : "List<Optional<AppDTO>>",
       "description" : null,
-      "methodDefinition" : "@Override\npublic Long createNewApp(AppDTO dto) {\n    return Stream.of(dto).map(builder::build).map(repository::save).map(App::getId).findFirst().get();\n}"
+      "methodDefinition" : "@Override\npublic List<Optional<AppDTO>> getAllApps() {\n    return repository.findAll().stream().map(builder::build).collect(Collectors.toList());\n}"
     } ],
     "fields" : [ {
       "name" : "repository",

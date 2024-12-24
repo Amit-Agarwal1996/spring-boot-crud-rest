@@ -325,34 +325,28 @@
     "description" : null,
     "annotations" : [ "Service", "AllArgsConstructor" ],
     "methods" : [ {
-      "name" : "createNewApp",
-      "body" : "{\n    return Stream.of(dto).map(builder::build).map(repository::save).map(App::getId).findFirst().get();\n}",
-      "arguments" : [ "AppDTO dto" ],
+      "name" : "getAppById",
+      "body" : "{\n    return repository.findById(id).map(builder::build).orElseThrow(() -> new AppNotFoundException(String.format(\"No such App for id '%s'\", id)));\n}",
+      "arguments" : [ "Long id" ],
       "accessModifier" : "public",
       "methodsCalled" : [ {
-        "name" : "get",
-        "arguments" : [ ]
-      }, {
-        "name" : "findFirst",
-        "arguments" : [ ]
-      }, {
-        "name" : "map",
-        "arguments" : [ "App::getId" ]
-      }, {
-        "name" : "map",
-        "arguments" : [ "repository::save" ]
+        "name" : "orElseThrow",
+        "arguments" : [ "() -> new AppNotFoundException(String.format(\"No such App for id '%s'\", id))" ]
       }, {
         "name" : "map",
         "arguments" : [ "builder::build" ]
       }, {
-        "name" : "of",
-        "arguments" : [ "dto" ]
+        "name" : "findById",
+        "arguments" : [ "id" ]
+      }, {
+        "name" : "format",
+        "arguments" : [ "\"No such App for id '%s'\"", "id" ]
       } ],
-      "usedEntities" : [ "Stream", "dto" ],
+      "usedEntities" : [ "repository", "id", "String" ],
       "annotations" : [ "Override" ],
-      "returnType" : "Long",
+      "returnType" : "Optional<AppDTO>",
       "description" : null,
-      "methodDefinition" : "@Override\npublic Long createNewApp(AppDTO dto) {\n    return Stream.of(dto).map(builder::build).map(repository::save).map(App::getId).findFirst().get();\n}"
+      "methodDefinition" : "@Override\npublic Optional<AppDTO> getAppById(Long id) {\n    return repository.findById(id).map(builder::build).orElseThrow(() -> new AppNotFoundException(String.format(\"No such App for id '%s'\", id)));\n}"
     } ],
     "fields" : [ {
       "name" : "repository",
